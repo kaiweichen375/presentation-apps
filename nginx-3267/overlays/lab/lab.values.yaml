@@ -39,5 +39,7 @@ web:
           path: /
           port: 8081
     - name: busybox
-      image: ghcr.io/104corp/busybox:1.35.0
+      image: 
+        repository: ghcr.io/104corp/busybox
+        tag: 1.35.0
       command: ["sleep", "360000"]
