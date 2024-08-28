@@ -1,14 +1,12 @@
 web:
   image:
-    repository: ghcr.io/104corp/bitnami/nginx
-    tag: 1.24.0
-  ports:
-  - containerPort: 80
+    repository: ghcr.io/104corp/nodejs
+    tag: v1
   extraContainers:
-  - name: nodejs
+  - name: nginx
     image:
-      repository: ghcr.io/104corp/nodejs
-      tag: v1
+      repository: ghcr.io/104corp/bitnami/nginx
+      tag: 1.24.0
     resources:
       limits:
         cpu: 200m
@@ -16,3 +14,7 @@ web:
       requests:
         cpu: 100m
         memory: 64Mi
+    ports:
+    - containerPort: 8000
+      protocol: TCP
+      name: nginx
