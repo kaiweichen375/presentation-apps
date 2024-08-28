@@ -6,7 +6,7 @@ web:
     - name: nodejs
       image:
         repository: ghcr.io/104corp/nodejs
-        tag: v1
+        tag: v2
       resources:
         limits:
           cpu: 200m
