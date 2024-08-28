@@ -1,0 +1,4 @@
+web:
+  image:
+    repository: ghcr.io/104corp/bitnami/nginx
+    tag: 1.24.0

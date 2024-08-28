@@ -6,4 +6,5 @@ labels:
     variant: lab
 namePrefix: lab-
 namespace: argocd
-resources: []
+resources:
+- nginx-3267.argocd.yaml

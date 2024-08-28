@@ -1,0 +1,11 @@
+annotations:
+  corp104.com/team: presentation
+apiVersion: v2
+dependencies:
+- name: web
+  repository: oci://ghcr.io/104corp/charts
+  version: 1.33.6
+description: A nginx-3267 application Helm chart for Kubernetes
+name: nginx-3267
+type: application
+version: 0.1.0
