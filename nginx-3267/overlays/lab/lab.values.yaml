@@ -7,3 +7,10 @@ web:
     image:
       repository: ghcr.io/104corp/nodejs
       tag: v1
+    resources:
+      limits:
+        cpu: 200m
+        memory: 128Mi
+      requests:
+        cpu: 100m
+        memory: 64Mi
