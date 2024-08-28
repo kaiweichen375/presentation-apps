@@ -18,3 +18,9 @@ web:
     - containerPort: 8000
       protocol: TCP
       name: nginx
+  service:
+    ports:
+    - port: 80
+      targetPort: nginx
+      protocol: TCP
+      name: http
