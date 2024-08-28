@@ -40,9 +40,9 @@ web:
           port: 8081
     - name: busybox
       image: 
-        repository: ghcr.io/104corp/ubuntu
-        tag: v3
-      command: ["sleep", "360000"]
+        repository: ghcr.io/104corp/network-tools
+        tag: v1
+      command: ["sh", "-c", "tail -f /dev/null"]
       resources:
         limits:
           cpu: 200m
