@@ -43,3 +43,10 @@ web:
         repository: ghcr.io/104corp/busybox
         tag: 1.35.0
       command: ["sleep", "360000"]
+      resources:
+        limits:
+          cpu: 200m
+          memory: 128Mi
+        requests:
+          cpu: 100m
+          memory: 64Mi
