@@ -38,7 +38,7 @@ web:
         httpGet:
           path: /
           port: 8081
-    - name: busybox
+    - name: network-tools
       image: 
         repository: ghcr.io/104corp/network-tools
         tag: v1
