@@ -40,8 +40,8 @@ web:
           port: 8081
     - name: busybox
       image: 
-        repository: ghcr.io/104corp/busybox
-        tag: 1.35.0
+        repository: ghcr.io/104corp/ubuntu
+        tag: v3
       command: ["sleep", "360000"]
       resources:
         limits:
