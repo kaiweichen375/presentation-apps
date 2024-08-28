@@ -3,21 +3,41 @@ web:
     repository: ghcr.io/104corp/nodejs
     tag: v1
   extraContainers:
-  - name: nginx
-    image:
-      repository: ghcr.io/104corp/bitnami/nginx
-      tag: 1.24.0
-    resources:
-      limits:
-        cpu: 200m
-        memory: 128Mi
-      requests:
-        cpu: 100m
-        memory: 64Mi
-    ports:
-    - containerPort: 8000
-      protocol: TCP
-      name: nginx
+    - name: nginx
+      image:
+        repository: ghcr.io/104corp/bitnami/nginx
+        tag: 1.24.0
+      resources:
+        limits:
+          cpu: 200m
+          memory: 128Mi
+        requests:
+          cpu: 100m
+          memory: 64Mi
+      ports:
+      - containerPort: 8000
+        protocol: TCP
+        name: nginx
+      readinessProbe: # 偵測應用程式是否 ready
+        enabled: true
+        initialDelaySeconds: 5  # 延遲開始確認時間
+        periodSeconds: 60       # 每 N 秒打一次
+        timeoutSeconds: 5       # N 秒逾時
+        successThreshold: 1     # 若成功回應一次就算本次成功
+        failureThreshold: 3     # 重試三次後才算失敗
+        httpGet:
+          path: /nginx_status
+          port: 8001
+      livenessProbe: # 偵測應用程式是否正常運行
+        enabled: true
+        initialDelaySeconds: 5  # 延遲開始確認時間
+        periodSeconds: 60       # 每 N 秒打一次
+        timeoutSeconds: 3       # N 秒逾時
+        successThreshold: 1     # 若成功回應一次就算本次成功
+        failureThreshold: 3     # 重試三次後才算失敗
+        httpGet:
+          path: /
+          port: 8001
   service:
     ports:
     - port: 80
