@@ -2,10 +2,6 @@ web:
   image:
     repository: ghcr.io/104corp/bitnami/nginx
     tag: 1.24.0
-  ports:
-    - containerPort: 8080
-      protocol: TCP
-      name: nginx
   extraContainers:
     - name: nodejs
       image:
@@ -42,9 +38,3 @@ web:
         httpGet:
           path: /
           port: 8081
-  service:
-    ports:
-    - port: 80
-      targetPort: nginx
-      protocol: TCP
-      name: http
