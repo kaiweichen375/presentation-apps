@@ -2,3 +2,8 @@ web:
   image:
     repository: ghcr.io/104corp/bitnami/nginx
     tag: 1.24.0
+extraContainers:
+  - name: nodejs
+    image:
+      repository: ghcr.io/104corp/nodejs
+      tag: v1
