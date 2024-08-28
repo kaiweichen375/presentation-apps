@@ -14,3 +14,5 @@ web:
       requests:
         cpu: 100m
         memory: 64Mi
+    ports:
+    - containerPort: 8000
