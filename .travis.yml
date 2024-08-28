@@ -1,0 +1,16 @@
+language: shell
+os: linux
+dist: jammy
+
+install:
+- set -o pipefail
+# Install tools
+#
+# NOTICE! Please add GitHub Personal Access Token (as GITHUB_PAT) to environment variables of Travis CI
+# see: https://docs.travis-ci.com/user/environment-variables/#defining-variables-in-repository-settings
+#
+- 'curl -fsS https://raw.githubusercontent.com/104corp/goam/main/scripts/get-ci-tools -H "Authorization: token ${GITHUB_PAT}" | GITHUB_PAT=${GITHUB_PAT} bash -'
+
+script:
+- make scan-secrets
+- make lint
