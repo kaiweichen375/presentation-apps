@@ -8,3 +8,4 @@ namePrefix: lab-
 namespace: argocd
 resources:
 - nginx-3267.argocd.yaml
+- nginx-3306.argocd.yaml
