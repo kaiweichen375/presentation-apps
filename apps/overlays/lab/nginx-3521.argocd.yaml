@@ -1,0 +1,32 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  annotations:
+    corp104.com/generated-by: goam-v0.77.0
+  name: nginx-3521
+spec:
+  generators:
+  - list:
+      elements:
+      - cluster: lab
+  template:
+    metadata:
+      annotations:
+        argocd.argoproj.io/manifest-generate-paths: .
+        notifications.argoproj.io/subscribe.corp104-argocd-on-deployed.teams: k8s-notifications
+        notifications.argoproj.io/subscribe.corp104-argocd-on-sync-failed.teams: k8s-notifications
+        notifications.argoproj.io/subscribe.corp104-argocd-on-sync-running.teams: k8s-notifications
+        notifications.argoproj.io/subscribe.corp104-argocd-on-sync-succeeded.teams: k8s-notifications
+      name: lab-{{cluster}}-nginx-3521
+    spec:
+      destination:
+        name: '{{cluster}}'
+        namespace: l-presentation-nginx-3521
+      project: l-presentation
+      source:
+        helm:
+          valueFiles:
+          - overlays/lab/{{cluster}}.values.yaml
+        path: nginx-3521
+        repoURL: https://github.com/104corp/presentation-apps.git
+        targetRevision: main

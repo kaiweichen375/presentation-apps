@@ -1,0 +1,6 @@
+dependencies:
+- name: web
+  repository: oci://ghcr.io/104corp/charts
+  version: 1.33.6
+digest: sha256:9336820958b50b885448bdd14ecae167e93ea2bb34a393c7fe65901df27ef877
+generated: "2024-08-29T13:37:41.51426+08:00"

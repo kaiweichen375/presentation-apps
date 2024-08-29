@@ -7,5 +7,20 @@ labels:
 namePrefix: lab-
 namespace: argocd
 resources:
+- nginx-1189.argocd.yaml
+- nginx-2176.argocd.yaml
+- nginx-2559.argocd.yaml
+- nginx-2604.argocd.yaml
+- nginx-3013.argocd.yaml
+- nginx-3108.argocd.yaml
+- nginx-3111.argocd.yaml
 - nginx-3267.argocd.yaml
 - nginx-3306.argocd.yaml
+- nginx-3343.argocd.yaml
+- nginx-3500.argocd.yaml
+- nginx-3521.argocd.yaml
+- nginx-3633.argocd.yaml
+- nginx-3647.argocd.yaml
+- nginx-3654.argocd.yaml
+- nginx-3682.argocd.yaml
+- nginx-3821.argocd.yaml

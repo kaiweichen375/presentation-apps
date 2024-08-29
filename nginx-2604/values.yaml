@@ -1,0 +1,6 @@
+global:
+  commonAnnotations:
+    corp104.com/business-unit: 工程總處-研發處-架構資料整合部
+    corp104.com/description: presentation nginx course
+    corp104.com/owner: deep.huang@104.com.tw
+    corp104.com/repository: https://github.com/104corp/vip3-auth-server
