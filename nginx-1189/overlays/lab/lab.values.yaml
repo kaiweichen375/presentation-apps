@@ -42,11 +42,12 @@ web:
               proxy_set_header X-Forwarded-Proto $scheme;
           }
       mountPath: /opt/bitnami/nginx/conf/bitnami/3267.conf
+  
   extraContainers:
     - name: nodejs
       image:
         repository: ghcr.io/104corp/nodejs
-        tag: v4
+        tag: v5
       resources:
         limits:
           cpu: 200m
