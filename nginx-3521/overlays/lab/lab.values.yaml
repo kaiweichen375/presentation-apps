@@ -26,7 +26,7 @@ web:
       mountPath: /opt/bitnami/nginx/conf/nginx.conf
     - name: 3521.conf
       value: |
-          listen *:8082;
+          listen *:8080;
           server_name nginx-3521.104-dev.com.tw;
           index  index.html index.htm index.php;
           location / {
