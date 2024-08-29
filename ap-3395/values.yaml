@@ -1,0 +1,6 @@
+global:
+  commonAnnotations:
+    corp104.com/business-unit: 新創工程處-產品開發課-專案開發課
+    corp104.com/description: nginx for persentation
+    corp104.com/owner: eason.lee@104.com.tw
+    corp104.com/repository: https://github.com/104corp/vip3-auth-server

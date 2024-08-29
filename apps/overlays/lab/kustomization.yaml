@@ -7,6 +7,7 @@ labels:
 namePrefix: lab-
 namespace: argocd
 resources:
+- ap-3395.argocd.yaml
 - nginx-1189.argocd.yaml
 - nginx-2176.argocd.yaml
 - nginx-2559.argocd.yaml
