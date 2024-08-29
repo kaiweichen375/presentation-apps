@@ -30,3 +30,6 @@ spec:
         path: nginx-2604
         repoURL: https://github.com/104corp/presentation-apps.git
         targetRevision: main
+      syncPolicy:
+        automated:
+          prune: true

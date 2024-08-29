@@ -33,3 +33,6 @@ spec:
       syncPolicy:
         automated:
           prune: true
+      syncPolicy:
+        automated:
+          prune: true
