@@ -19,8 +19,7 @@ web:
           default_type  application/octet-stream;
           include  "/opt/bitnami/nginx/conf/server_blocks/*.conf";
           upstream backend {
-            server 10.42.196.68:8080;
-            server 10.42.5.37:8080;
+            server lab-lab-nginx-3267-web.l-presentation-nginx-3267.svc.cluster.local;
           }
         # HTTP Server
           server {
