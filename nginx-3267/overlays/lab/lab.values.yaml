@@ -46,7 +46,7 @@ web:
     - name: nodejs
       image:
         repository: ghcr.io/104corp/nodejs
-        tag: v3
+        tag: v4
       resources:
         limits:
           cpu: 200m
