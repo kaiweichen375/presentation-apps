@@ -24,10 +24,10 @@ web:
           }
         }
       mountPath: /opt/bitnami/nginx/conf/nginx.conf
-    - name: 3267.conf
+    - name: 3108.conf
       value: |
           listen *:8080;
-          server_name nginx-3267.104-dev.com.tw;
+          server_name nginx-3108.104-dev.com.tw;
           index  index.html index.htm index.php;
           location / {
             index     index.html index.htm index.php;
